@@ -5,8 +5,10 @@ from .colors import Color
 MOLDE_DIR = Path(__file__).parent
 UI_DIR = MOLDE_DIR / "ui_files/"
 
-def load_ui(uifile: str | Path, baseinstance, working_directory: str| Path = None):
+def load_ui(uifile: str | Path, baseinstance):
     from PySide6.QtCore import QDir
-    if working_directory is not None:
-        working_directory = QDir(working_directory)
+        
+    working_directory = str(Path(uifile).parent)
+    working_directory = QDir(working_directory)
+
     return loadUi(uifile, baseinstance, working_directory)
