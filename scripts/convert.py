@@ -41,8 +41,7 @@ def main():
         png_path = Path("data/vibra/png") / svg_path.with_suffix(".png").name
         svg_to_png(svg_path, png_path)
 
-    zip_folders("data/vibra/png", "data/vibra/svg", output="data/vibra_logos.zip")
-    zip_folders("data/open_pulse/png", "data/open_pulse/svg", output="data/open_pulse_logos.zip")
+    zip_folders("data/vibra", "data/open_pulse", output="data/all_logos.zip")
 
 
 if __name__ == "__main__":
