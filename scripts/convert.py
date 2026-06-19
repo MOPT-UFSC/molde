@@ -33,10 +33,16 @@ def main():
     svg_base_path = Path("data/svg/")
     png_base_path = Path("data/png/")
 
-    for svg_path in svg_base_path.glob("*.svg"):
-        png_path = png_base_path / svg_path.with_suffix(".png").name
+    for svg_path in Path("data/open_pulse/svg").glob("*.svg"):
+        png_path = Path("data/open_pulse/png") / svg_path.with_suffix(".png").name
         svg_to_png(svg_path, png_path)
-    zip_folders("data/png", "data/svg", output="data/vibra_open_pulse_logos.zip")
+
+    for svg_path in Path("data/vibra/svg").glob("*.svg"):
+        png_path = Path("data/vibra/png") / svg_path.with_suffix(".png").name
+        svg_to_png(svg_path, png_path)
+
+    zip_folders("data/vibra/png", "data/vibra/svg", output="data/vibra_logos.zip")
+    zip_folders("data/open_pulse/png", "data/open_pulse/svg", output="data/open_pulse_logos.zip")
 
 
 if __name__ == "__main__":
