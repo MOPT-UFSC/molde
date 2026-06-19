@@ -17,10 +17,6 @@ A lot of free to use icons, from Material Design, are available [here](https://f
 Other icons may be necessary, and they will be made to match the same style.
 For consistency avoid using icons from other places.
 
-# Typeface
-The font choose for this system is [IBM Plex](https://www.ibm.com/plex/).
-The `.ttf` files for every version of the font, including monospaced, can be found [here](https://github.com/IBM/plex/tree/master/packages).
-
 # Component
 The sylesheets of the Qt components are designed to make it similar to [Atlassian components](https://atlassian.design/components/).
 Always check for the Atlassian component usage guide in case of any doubt.
