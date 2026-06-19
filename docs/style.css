@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #ffffff;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.block {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  padding: 32px;
+  transition: background 0.3s, color 0.3s;
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.block-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.block-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.6;
+  align-self: flex-start;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+.block-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 20px;
+}
+
+.block-links li {
+  font-size: 14px;
+}
+
+.block-links .label {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s;
+}
+
+.block-links .label:hover {
+  opacity: 0.65;
+}
+
+.theme-light .block-links .label {
+  color: #1a1a1a;
+  background: rgba(0,0,0,0.06);
+}
+
+.theme-dark .block-links .label {
+  color: #f0f0f0;
+  background: rgba(255,255,255,0.1);
+}
+
+.theme-color .block-links .label {
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+}
+
+.nav-btn {
+  display: block;
+  width: 280px;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1a1a1a;
+  background: transparent;
+  border: 2px solid #1a1a1a;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.block.theme-light {
+  background: #F0F0F5;
+  color: #1a1a1a;
+}
+
+.block.theme-dark {
+  background: #24252E;
+  color: #f0f0f0;
+}
+
+.block.theme-color {
+  background: linear-gradient(135deg, #919BFF, #133A94);
+  color: #ffffff;
+}
